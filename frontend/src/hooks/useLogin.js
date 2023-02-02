@@ -10,7 +10,7 @@ export const useLogin = () => {
         setLoading(true)
         setError(null)
 
-        const response = await fetch(process.env.DOMAIN + '/api/users/login', {
+        const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/users/login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
