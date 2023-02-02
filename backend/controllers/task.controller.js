@@ -30,7 +30,7 @@ const getTask = async (req, res) => {
 
 // create task
 const createTask = async (req, res) => {
-    const { title, description, completed } = req.body
+    const { title, description } = req.body
 
     const emptyFields = []
 
@@ -46,7 +46,7 @@ const createTask = async (req, res) => {
 
     try {
         const user_id = req.user._id
-        const task = await Task.create({ title, description, completed, user_id })
+        const task = await Task.create({ title, description, user_id })
         res.status(200).json(task)
     } catch (error) {
         res.status(400).json({ error: error.message })

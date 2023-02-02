@@ -8,7 +8,6 @@ const TaskForm = () => {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
-    const [completed, setCompleted] = useState(false)
     const [error, setError] = useState(null)
     const [emptyFields, setEmptyFields] = useState([])
 
@@ -20,7 +19,7 @@ const TaskForm = () => {
             return
         }
 
-        const task = {title, description, completed}
+        const task = {title, description}
 
         const response = await fetch('/api/tasks', {
             method: 'POST',
@@ -40,7 +39,6 @@ const TaskForm = () => {
         if(response.ok) {
             setTitle('')
             setDescription('')
-            setCompleted(false)
             setError(null)
             setEmptyFields([])
             dispatch({type: 'CREATE_TASK', payload: json})
@@ -66,13 +64,6 @@ const TaskForm = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 value={description}
                 className={emptyFields.includes('description') ? 'error' : ''}
-            />
-
-            <label>Completed:</label>
-            <input 
-                type="checkbox"
-                onChange={(e) => setCompleted(e.target.value)}
-                value={completed}
             />
 
         <button>Add task</button>

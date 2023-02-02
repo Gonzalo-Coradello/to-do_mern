@@ -28,7 +28,6 @@ const TaskDetails = ({ task }) => {
     <div className="task-details">
         <h4>{task.title}</h4>
         <p>{task.description}</p>
-        <p>Completed: {task.completed ? 'yes' : 'no'}</p>
         <p>{formateDistanceToNow(new Date(task.createdAt), { addSuffix: true })}</p>
         <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
     </div>
