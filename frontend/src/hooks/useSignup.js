@@ -10,7 +10,7 @@ export const useSignup = () => {
         setLoading(true)
         setError(null)
 
-        const response = await fetch('/api/users/signup', {
+        const response = await fetch(process.env.DOMAIN + '/api/users/signup', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})

@@ -13,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchTasks = async () => {
-            const response = await fetch('/api/tasks', {
+            const response = await fetch(process.env.DOMAIN + '/api/tasks', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
