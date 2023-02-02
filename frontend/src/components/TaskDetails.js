@@ -11,7 +11,7 @@ const TaskDetails = ({ task }) => {
             return
         }
 
-        const response = await fetch('/api/tasks/' + task._id, {
+        const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks/' + task._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
