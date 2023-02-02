@@ -22,6 +22,7 @@ const TaskForm = () => {
         const task = {title, description}
 
         const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks', {
+            mode: 'no-cors',
             method: 'POST',
             body: JSON.stringify(task),
             headers: {
