@@ -18,9 +18,7 @@ header .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
 }
 header a {
   color: #333;
@@ -35,10 +33,9 @@ header a {
 /* homepage */
 .home {
   display: grid;
-  grid-template-columns: 3fr 1fr;
   gap: 100px;
 }
-.workout-details {
+.task-details {
   background: #fff;
   border-radius: 4px;
   margin: 20px auto;
@@ -46,17 +43,17 @@ header a {
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
 }
-.workout-details h4 {
+.task-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
   color: var(--primary);
 }
-.workout-details p {
+.task-details p {
   margin: 0;
   font-size: 0.9em;
   color: #555;
 }
-.workout-details span {
+/* .task-details span {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -65,9 +62,9 @@ header a {
   padding: 6px;
   border-radius: 50%;
   color: #333;
-}
+} */
 
-/* new workout form */
+/* new task form */
 label, input {
   display: block;
 }
@@ -109,6 +106,9 @@ nav {
 nav a, nav button {
   margin-left: 10px;
 }
+nav div {
+  margin-inline: auto;
+}
 nav button {
   background: #fff;
   color: var(--primary);
@@ -127,4 +127,16 @@ form.signup, form.login {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 850px) {
+  .home {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  header .container {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
 }
