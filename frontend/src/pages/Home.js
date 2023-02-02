@@ -13,7 +13,8 @@ const Home = () => {
 
     useEffect(() => {
         const fetchTasks = async () => {
-            const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks', {
+            const response = await fetch('http://localhost:4000/api/tasks', {
+            // const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

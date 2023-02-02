@@ -46,7 +46,7 @@ const createTask = async (req, res) => {
 
     try {
         const user_id = req.user._id
-        const task = await Task.create({ title, description, user_id })
+        const task = await Task.create({ title, description, completed: false, user_id })
         res.status(200).json(task)
     } catch (error) {
         res.status(400).json({ error: error.message })
@@ -75,9 +75,13 @@ const deleteTask = async (req, res) => {
 const updateTask = async (req, res) => {
     const { id } = req.params
 
+     console.log(req.body)
+
+
     if(!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({ error: 'Task not found' })
     }
+
 
     const task = await Task.findOneAndUpdate({_id: id}, {
         ... req.body
