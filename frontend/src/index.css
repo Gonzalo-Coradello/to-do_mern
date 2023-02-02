@@ -53,7 +53,7 @@ header a {
   font-size: 0.9em;
   color: #555;
 }
-/* .task-details span {
+.task-details span {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -62,7 +62,7 @@ header a {
   padding: 6px;
   border-radius: 50%;
   color: #333;
-} */
+}
 
 /* new task form */
 label, input {
