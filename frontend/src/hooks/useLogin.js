@@ -11,7 +11,6 @@ export const useLogin = () => {
         setError(null)
 
         const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/users/login', {
-            mode: 'no-cors',
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})

@@ -14,7 +14,6 @@ const Home = () => {
     useEffect(() => {
         const fetchTasks = async () => {
             const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks', {
-                mode: 'no-cors',
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
