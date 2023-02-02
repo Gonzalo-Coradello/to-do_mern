@@ -21,7 +21,7 @@ const TaskForm = () => {
 
         const task = {title, description}
 
-        const response = await fetch(process.env.DOMAIN + '/api/tasks', {
+        const response = await fetch('/api/tasks', {
             method: 'POST',
             body: JSON.stringify(task),
             headers: {
