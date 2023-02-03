@@ -18,7 +18,7 @@ export const tasksReducer = (state, action) => {
             }
         case 'UPDATE_TASK':
             return {
-                tasks: [action.payload]
+                tasks: state.tasks
             }
 
         default:

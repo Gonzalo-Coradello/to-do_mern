@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useTasksContext } from '../hooks/useTasksContext'
 import { useAuthContext } from '../hooks/useAuthContext'
+import Grid from "@mui/material/Grid"
 
 // components
 import TaskDetails from '../components/TaskDetails'
@@ -13,8 +14,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchTasks = async () => {
-            const response = await fetch('http://localhost:4000/api/tasks', {
-            // const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks', {
+            const response = await fetch('https://to-do-backend-v1k0.onrender.com/api/tasks', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
@@ -31,14 +31,16 @@ const Home = () => {
     }, [dispatch, user])
 
     return (
-        <div className="home">
-            <div className="tasks">
+        <Grid container spacing={8} justifyContent='space-between' direction={{xs: 'column-reverse', md: 'row'}}>
+            <Grid item xs={12} md={8}>
                 { tasks && tasks.map(task => (
                     <TaskDetails key={task._id} task={task} />
                 ))}
-            </div>
-            <TaskForm />
-        </div>
+            </Grid>
+            <Grid container item xs={12} md={4} justifyContent='center' >
+                <TaskForm />
+            </Grid>
+        </Grid>
     )
 }
 
