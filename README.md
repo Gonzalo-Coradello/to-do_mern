@@ -1,7 +1,7 @@
 # TO-DO APP
 ## Full-Stack CRUD
 
-_[en]_ Full-Stack to-do app with user authentication.
+_[en]_ Full-Stack to-do app with user authentication. <br></br>
 _[es]_ Aplicación de lista de tareas Full-Stack con autenticación de usuarios.
 
 ## Features:
@@ -27,6 +27,6 @@ _[es]_ Aplicación de lista de tareas Full-Stack con autenticación de usuarios.
 ##### [TO-DO APP](https://to-do-mern.vercel.app/)
 
 ## Screeenshots
-![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-login)
-![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks)
-![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks-mobile)
+![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-login.jpg)
+![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks.jpg)
+![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks-mobile.jpg)
