@@ -29,4 +29,4 @@ _[es]_ Aplicación de lista de tareas Full-Stack con autenticación de usuarios.
 ## Screeenshots
 ![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-login.jpg)
 ![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks.jpg)
-![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks-mobile.jpg)
+![](https://github.com/Gonzalo-Coradello/to-do_mern/blob/main/screenshots/to-do-tasks-mobile.png)
